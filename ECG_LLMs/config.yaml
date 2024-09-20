@@ -1,0 +1,40 @@
+network:
+  ecg_model: resnet50
+  ### this part does not control builder/trainer
+  text_model: emilyalsentzer/Bio_ClinicalBERT
+  free_layers: 9 # set 12 to freeze all layer in bert
+  feature_dim: 768
+
+  projection_head:
+    mlp_hidden_size: 2048
+    projection_size: 128
+  ###
+
+dataset:
+  dataset_name: 'mimic'
+  ## this is for PTB-XL dataset 21k
+  ecg_path: '/fs/scratch/PAS2473/ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.3/' # add your image file path here
+  text_path: '/users/PAS2473/brucewan666/ECG/ECG/instruct_data/RG_en_ptbxl_train.csv'
+  ## this is for MIMIC-ECG dataset 800k
+  # ecg_path: '/fs/scratch/PAS2473/mimic-iv-ecg-diagnostic-electrocardiogram-matched-subset-1.0/' # add your image file path here
+  # text_path: '/fs/scratch/PAS2473/mimic-iv-ecg-diagnostic-electrocardiogram-matched-subset-1.0/machine_measurements.csv'
+
+
+# params for trainer
+trainer:
+  batch_size: 512
+  test_batch_size: 200
+  checkpoint_interval: 100000
+  max_epochs: 50
+  lr: 2.0e-4
+  num_workers: 8
+  test_interval: 2
+
+optimizer:
+  params:
+    lr: 2.0e-4
+    # momentum: 0.9
+    weight_decay: 1.0e-5
+
+# your model name
+wandb_name: 'test_EKG_hm_first'
