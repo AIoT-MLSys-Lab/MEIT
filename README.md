@@ -4,7 +4,7 @@
 #### Step 1: download data and preprocess data
 
 - 1.download data from google drive to your linux device:
-Google drive link: #############. 
+Google drive link: [#############](https://drive.google.com/drive/folders/1CbBaqw8wjbCaP9FXhy41jEw5Jc8riYqz?usp=sharing). 
 
 - 2.proprocess data: get into the 'config.yaml' file to set up the link of downloaded data:
 
