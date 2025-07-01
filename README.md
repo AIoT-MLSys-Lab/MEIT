@@ -1,4 +1,4 @@
-# MEIT
+# MEIT (ACL 2025 Findings)
 ## Easy steps for efficient implementations
 
 #### Step 1: download data and preprocess data
