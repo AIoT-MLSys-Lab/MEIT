@@ -1,4 +1,4 @@
-# MEIT (ACL 2025 Findings)
+# MEIT: Multi-Modal Electrocardiogram Instruction Tuning on Large Language Models for Report Generation (ACL 2025 Findings)
 ## Easy steps for efficient implementations
 
 #### Step 1: download data and preprocess data
